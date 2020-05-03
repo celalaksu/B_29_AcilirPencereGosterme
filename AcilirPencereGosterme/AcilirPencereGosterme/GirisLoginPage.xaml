@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<pages:PopupPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             
+             xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+                 
+             xmlns:animations="clr-namespace:Rg.Plugins.Popup.Animations;assembly=Rg.Plugins.Popup"
+                 
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="AcilirPencereGosterme.GirisLoginPage">
+
+    <pages:PopupPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="GirisStili" TargetType="Entry">
+                <Setter Property="PlaceholderColor" Value="#9cdaf1"/>
+                <Setter Property="TextColor" Value="#7dbbe6"/>
+            </Style>
+        </ResourceDictionary>
+    </pages:PopupPage.Resources>
+<!--
+    <pages:PopupPage.Animation>
+        <animations:ScaleAnimation
+      PositionIn="Bottom"
+      PositionOut="Center"
+      ScaleIn="1"
+      ScaleOut="0.7"
+      DurationIn="700"
+      EasingIn="BounceOut"/>
+    </pages:PopupPage.Animation>
+-->
+    
+    <pages:PopupPage.Animation>
+        <animations:ScaleAnimation 
+            PositionIn="Center"
+            PositionOut="Center"
+            ScaleIn="1.2"
+            ScaleOut="0.8"
+            DurationIn="700"
+            DurationOut="300"
+            EasingIn="CubicIn"
+            EasingOut="SinIn"
+            HasBackgroundAnimation="True"/>
+        
+ 
+    <pages:PopupPage.Content>        
+        <Frame CornerRadius="15"
+               Margin="10">
+            <StackLayout Orientation="Vertical" VerticalOptions="CenterAndExpand"
+                     BackgroundColor="White">
+                <Entry x:Name="kullaniciAdiEntry" Placeholder="Kullanıcı adınızı giriniz."
+                   Style="{StaticResource GirisStili}"/>
+                <Entry x:Name="sifreEntry" Placeholder="Şifrenizi giriniz."
+                   Style="{StaticResource GirisStili}"/>
+                <StackLayout Orientation="Horizontal" HorizontalOptions="End">
+                    <Button x:Name="girisButton" Text="Giris Yap"
+                        Clicked="GirisButton_Clicked"/>
+                    <Button x:Name="vazgecButton" Text="Vazgeç"
+                        Clicked="vazgecButton_Clicked"/>
+                </StackLayout>
+            </StackLayout>
+        </Frame>
+    </pages:PopupPage.Content>
+</pages:PopupPage>

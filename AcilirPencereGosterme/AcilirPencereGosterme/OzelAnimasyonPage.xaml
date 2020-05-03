@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<pages:PopupPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             
+             xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+             
+             xmlns:animasyonlar="clr-namespace:AcilirPencereGosterme.Animasyonlar;assembly=AcilirPencereGosterme"
+             
+             mc:Ignorable="d"
+             x:Class="AcilirPencereGosterme.OzelAnimasyonPage">
+
+    <pages:PopupPage.Animation>
+        <animasyonlar:OzelAnimasyon/>
+    </pages:PopupPage.Animation>
+    
+    <pages:PopupPage.Content>
+        <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
+            <Frame BackgroundColor="Silver">
+                <StackLayout Spacing="20">
+                    <Label HorizontalOptions="Center" Text="Özel Animasyon" FontSize="16"></Label>
+                    <Button Text="Kapat" Clicked="Button_Clicked"></Button>
+                </StackLayout>
+            </Frame>
+        </StackLayout>
+    </pages:PopupPage.Content>
+</pages:PopupPage>

@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="AcilirPencereGosterme.MainPage">
+
+    <StackLayout Orientation="Vertical"
+                 VerticalOptions="CenterAndExpand">
+        
+        <Button x:Name="acilirPencere" Clicked="AcilirPencere_Clicked"
+                Text="Açılır Pencere"/>
+        <Button x:Name="seceneklerButton" Clicked="SeceneklerButton_Clicked"              
+                Text="Seçenek Göster"/>
+        <Button x:Name="veriAlButton" Clicked="VeriAlButton_Clicked"
+                Text="Veri Al"/>
+        <Button x:Name="Giris" Clicked="Giris_Clicked" Text="Giriş Yap"/>
+        <Button x:Name="ozelAnimasyonButton" Clicked="OzelAnimasyonButton_Clicked" Text="Özel Animasyon"/>
+
+    </StackLayout>
+
+</ContentPage>
